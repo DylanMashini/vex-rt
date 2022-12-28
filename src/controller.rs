@@ -203,6 +203,13 @@ impl Button {
             _ => Err(ControllerError::from_errno()),
         }
     }
+    pub fn get_digital_new_press(&self) -> Result<bool, ControllerError> {
+        match unsafe { bindings::controller_get_digital_new_press(self.id, self.button) } {
+            0 => Ok(false),
+            1 => Ok(true),
+            _ => Err(ControllerError::from_errno()),
+        }
+    }
 }
 
 /// Represents the screen on a Vex controller

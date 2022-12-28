@@ -33,6 +33,7 @@ const WHITELISTED_FUNCS: &[&str] = &[
     "controller_is_connected",
     "controller_rumble",
     "controller_set_text",
+    "controller_print",
     "distance_get",
     "distance_get_confidence",
     "distance_get_object_size",
@@ -153,6 +154,7 @@ const WHITELISTED_FUNCS: &[&str] = &[
     "task_get_state",
     "task_notify",
     "task_notify_take",
+    "controller_get_digital_new_press",
 ];
 
 // Variables to be included by bindgen
